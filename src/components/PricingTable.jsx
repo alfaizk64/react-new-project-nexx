@@ -21,7 +21,7 @@ function PricingTable() {
           </div>
         </div>
   
-        <div className="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
+        <div className="lg:max-w-6xl mx-auto grid gap-6  lg:grid-cols-3 items-start ">
   
           {/* Pricing tab 1 */}
           <PricingTab

@@ -17,8 +17,8 @@ function MileStone({title,description,lastItem}) {
           }
         </div>
            <div className='ml-10 '>
-           <h3 className='text-xl font-bold'>{title}</h3>
-           <p className='milestone_description'>{description}</p>
+              <h3 className='text-xl font-bold'>{title}</h3>
+              <p className='mt-2 text-gray-600'>{description}</p>
            </div>
 
         {!lastItem && <div className='milestone_line'></div>}

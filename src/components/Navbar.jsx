@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { link } from "../Link";
+import { link } from "../data/Link";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import logo from "../assets/logo.png";
 import MobileMenu from "./MobileMenu";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -33,19 +34,19 @@ const Navbar = () => {
                 {link.map((link, index) => {
                   return (
                     <li key={index}>
-                      <a className="text-gray-600">{link.name}</a>
+                      <Link to={link.to} className="text-gray-600">{link.name}</Link>
                     </li>
                   );
                 })}
               </ul>
             </nav>
             <div className="md:flex gap-2 hidden">
-              <a className="bg-black px-2 py-[2px] rounded-md text-white cursor-pointer">
+              <Link to={'/login'} className="bg-black px-2 py-[2px] rounded-md text-white cursor-pointer">
                 Login
-              </a>
-              <a className="bg-black px-2 py-[2px] rounded-md text-white cursor-pointer">
+              </Link>
+              <Link to={'/signup'} className="bg-black px-2 py-[2px] rounded-md text-white cursor-pointer">
                 Sing Up
-              </a>
+              </Link>
             </div>
             <MobileMenu />
           </div>

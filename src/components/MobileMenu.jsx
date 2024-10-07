@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AlignJustify, X } from "lucide-react";
-import { link } from "../Link";
+import { link } from "../data/Link";
 const MobileMenu = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
@@ -15,7 +15,7 @@ const MobileMenu = () => {
             <button onClick={() => setNavOpen(false)}>
               <X />
             </button>
-            <div className="absolute left-0 w-full top-20 bg-white/60 backdrop-blur-lg border-b border-t ">
+            <div className="absolute left-0 w-full top-20 bg-white/60 backdrop-blur-lg border-b border-t transition-all duration-200 ">
               <ul className="flex flex-col items-center py-4">
                 {link.map((link, index) => {
                   return (
