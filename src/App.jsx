@@ -3,10 +3,11 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home";
 import  LoginCard  from "./components/LoginCard";
-import PricingTable from "./components/PricingTable";
-import RoadMapSection from "./components/RoadMapSection";
-import FeaturesSection from "./components/FeaturesSection";
 import SignUp from "./components/SignUp";
+import FeatureRoute from "./components/FeatureRoute";
+import AboutUsRoute from "./components/AboutUsRoute";
+import PricingRoute from "./components/PricingRoute";
+import Error from "./components/Error";
 
 const router = createBrowserRouter(
   [
@@ -21,15 +22,15 @@ const router = createBrowserRouter(
     },
     {
       path: "/pricing",
-      element: <PricingTable/>
+      element: <PricingRoute/>
     },
     {
       path: "/about",
-      element: <RoadMapSection/>
+      element: <AboutUsRoute/>
     },
     {
       path: "/feature",
-      element: <FeaturesSection/>
+      element: <FeatureRoute/>
     },
     {
       path: "/signup",
@@ -38,7 +39,7 @@ const router = createBrowserRouter(
     // Default route if none of the above match
     {
       path: "*",
-      element: <div>Page not found</div>
+      element: <Error/>
     },
    
   ]
